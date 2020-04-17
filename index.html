@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <title>Connect4</title>
+        <!-- Link of Custom CSS file -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Game Board Content Starts from here -->
+        <div id="container">
+            <!-- First Player Left Chips Wrapper -->
+            <div class="player-sidebar">
+                <!-- First Player Chips Stack -->
+                <div class="player-one-chips-stack"></div>
+
+                <!-- First Player Name -->
+                <div class="player-one-details">
+                    <span class="player-name">Player One</span>
+                </div>
+
+            </div>
+
+            <!-- Board Wrapper -->
+            <div class="board-wrapper">
+                <!-- Board -->
+                <div id="board"></div>  
+                
+                <!-- Undo Move Button -->
+                <input type="button" class="undo-move-btn" value="Undo Move" onclick="back()" />           
+            </div>
+
+            <!-- Second Player Right Chips Wrapper -->
+            <div class="player-sidebar">
+                <!-- Second Player Chips Stack -->
+                <div class="player-two-chips-stack"></div>
+
+                <!-- Second Player Name -->
+                <div class="player-two-details">
+                    <span class="player-name">Player Two</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Game Board Content Ends here -->
+
+        <!-- Player Names Popup Starts from here -->
+        <div class="popup-wrapper player-names-popup">
+            <div class="popup-content">
+                <div class="popup-body">
+
+                    <!-- Game Logo -->
+                    <div class="game-logo-wrapper">
+                        <img class="game-logo" src="images/game_logo.png" />
+                    </div>
+
+                    <!-- Player Names Form -->
+                    <div class="player-form-wrapper">
+                        <form class="player-names-form">
+                            <div class="input-field">
+                                <label>First Player</label>
+                                <input type="text" name="firstplayer" id="firstplayer" value="" placeholder="Player Name" autocomplete="off" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Second Player</label>
+                                <input type="text" name="secondplayer" id="secondplayer" value="" placeholder="Player Name" autocomplete="off" required>
+                            </div>
+                            <div class="form-submit">
+                                <input type="submit" value="Start Game">
+                            </div>
+                        </form> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Player Names Popup Ends here -->
+
+        <!-- Winner Player Popup Starts from here -->
+        <div class="popup-wrapper player-won-popup">
+            <div class="popup-content">
+                <div class="popup-body">
+
+                    <!-- Game Logo -->
+                    <div class="game-logo-wrapper">
+                        <img class="game-logo" src="images/game_logo.png" />
+                    </div>
+
+                    <!-- Winner Player Details -->
+                    <div class="player-form-wrapper">
+                        <div class="won-player-wrapper">
+                            <img class="trophy-gif" src="images/trophy.gif" />
+                            <h4 class="won-player-name"></h4>
+                        </div>
+                        <div class="restart-game">
+                            <input type="button" value="Play Again">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Winner Player Popup Ends here -->
+
+        <!-- Links of Script files -->
+        <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <script type='text/javascript' src='js/dragndrop.js'></script>
+        <script type='text/javascript' src='js/custom.js'></script>
+    </body>
+</html>
